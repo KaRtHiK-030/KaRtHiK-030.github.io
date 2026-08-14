@@ -1054,3 +1054,228 @@ footer a:hover {
     margin-bottom: 35px;
   }
 }
+
+
+/* ---------- V9: project case studies + engineering approach ---------- */
+
+.case-study {
+  position: relative;
+  margin-top: 18px;
+  border-top: 1px solid #252932;
+  padding-top: 13px;
+}
+
+.case-study summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777c86;
+  font: 10px "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+.case-study summary::-webkit-details-marker {
+  display: none;
+}
+
+.case-study summary span {
+  font-size: 16px;
+  color: var(--accent);
+  transition: transform .25s ease;
+}
+
+.case-study[open] summary span {
+  transform: rotate(45deg);
+}
+
+.case-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding-top: 18px;
+  animation: caseOpen .3s ease both;
+}
+
+.case-body div {
+  padding: 14px;
+  border: 1px solid #252932;
+  border-radius: 8px;
+  background: rgba(8,9,11,.45);
+}
+
+.case-body b {
+  color: var(--accent);
+  font: 9px "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.case-body p {
+  margin-top: 7px;
+  color: #858a94;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.approach-heading {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 70px;
+  align-items: end;
+}
+
+.approach-heading h2 {
+  margin-bottom: 45px;
+}
+
+.approach-heading > p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 52px;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+}
+
+.approach-grid article {
+  position: relative;
+  min-height: 210px;
+  padding: 28px;
+  background: var(--bg);
+  overflow: hidden;
+  transition: background .25s ease, transform .25s ease;
+}
+
+.approach-grid article:hover {
+  background: #0d0f13;
+  transform: translateY(-3px);
+}
+
+.approach-grid article > span {
+  color: #4f545e;
+  font: 11px "DM Mono", monospace;
+}
+
+.approach-grid h3 {
+  margin: 55px 0 10px;
+  font-size: 21px;
+}
+
+.approach-grid p {
+  color: var(--muted);
+  font-size: 12px;
+  max-width: 300px;
+}
+
+@keyframes caseOpen {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 850px) {
+  .case-body {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-heading {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .approach-heading > p {
+    margin-top: -25px;
+    margin-bottom: 35px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-grid article {
+    min-height: 170px;
+  }
+
+  .approach-grid h3 {
+    margin-top: 35px;
+  }
+}
+
+
+/* ---------- V10: recruiter polish ---------- */
+
+.highlight-strip {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px 75px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+
+.highlight-strip > div {
+  min-height: 92px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  background: rgba(12,14,18,.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.highlight-strip > div:hover {
+  transform: translateY(-4px);
+  background: #101318;
+  border-color: #3a3f49;
+}
+
+.highlight-strip strong {
+  font: 600 20px "DM Mono", monospace;
+  color: #eef0f4;
+  letter-spacing: -.5px;
+}
+
+.highlight-strip span {
+  margin-top: 5px;
+  color: #666b75;
+  font: 9px "DM Mono", monospace;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .highlight-strip {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav nav {
+    max-width: 72vw;
+    gap: 17px;
+  }
+
+  .nav nav a {
+    font-size: 11px;
+  }
+
+  .highlight-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-strip {
+    grid-template-columns: 1fr;
+  }
+}
