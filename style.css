@@ -1030,3 +1030,27 @@ footer a:hover {
     padding: 22px;
   }
 }
+
+
+/* ---------- V8: real repository links ---------- */
+
+.all-projects-link {
+  display: inline-block;
+  margin-top: -28px;
+  margin-bottom: 45px;
+  color: var(--muted);
+  font: 11px "DM Mono", monospace;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.all-projects-link:hover {
+  color: var(--accent);
+  transform: translateX(3px);
+}
+
+@media (max-width: 800px) {
+  .all-projects-link {
+    margin-top: -18px;
+    margin-bottom: 35px;
+  }
+}
